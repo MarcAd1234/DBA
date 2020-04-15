@@ -1,1 +1,11 @@
-/* Your app custom styles here */
+:root {
+    
+    --f7-navbar-bg-color: red;
+    --f7-navbar-hide-show-transition-duration: 400ms;
+    --f7-navbar-title-line-height: 1.2;
+    --f7-navbar-title-font-size: inherit;
+    --f7-navbar-subtitle-text-align: inherit;
+    --f7-navbar-large-title-line-height: 1.2;
+    --f7-navbar-large-title-text-color: black;
+    --f7-navbar-large-title-padding-left: 16px;
+    --f7-navbar-large-title-padding-right: 16px;
