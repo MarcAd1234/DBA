@@ -162,7 +162,7 @@ function ClickButton6() {
               s = s + 1;
               return document.getElementById("s2").value = "9";
             } else if (s == 3){
-              erg = erg + 7
+              erg = erg + 9
               s = s + 1
               document.getElementById("s3").value = "9"
             } else if (s == 4){
@@ -207,5 +207,9 @@ function ClickButton6() {
                 document.getElementById("s6").value = "10"
               }
             }
+
+            function CountRound() {
+              document.getElementById("r1").innerHTML = erg;
+              };
 
 
