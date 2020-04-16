@@ -32,10 +32,13 @@ var app = new Framework7({
 });
 
 // Play alone
-s = 1;
-Runde = 1;
-erg = 0; 
-console.log(s);
+
+function StartAlone(){
+  s = 1;
+  Runde = 1;
+  erg = 0; 
+}
+
 
 function ClickButton0() {
       if (s == 1) {
