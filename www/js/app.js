@@ -36,7 +36,8 @@ var app = new Framework7({
 function StartAlone(){
   s = 1;
   Runde = 1;
-  erg = 0; 
+  erg = 0;
+  ergGesamt = 0; 
 }
 
 
@@ -242,6 +243,8 @@ function ClickButton6() {
               document.getElementById("s5").value = "links unten";
               document.getElementById("s6").value = "rechts unten";
               Runde = Runde + 1
+              ergGesamt = ergGesamt + erg
+              document.getElementById("ergGesamt").innerHTML = ergGesamt
               erg = 0
               s = 1
 
