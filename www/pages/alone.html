@@ -49,22 +49,22 @@
     <div class="block-title">Treffer eintragen</div>
     <div class="block">
       <p class="row">
-        <button class="col button button-fill color-black">kein Treffer</button>
+        <button class="col button button-fill color-black" onclick="ClickButton0()">kein Treffer</button>
       </p>
       <p class="row">
-        <button class="col button button-fill color-blue">6</button>
+        <button class="col button button-fill color-blue" onclick="ClickButton6()">6</button>
       </p>
       <p class="row">
-        <button class="col button button-fill color-red">7</button>
+        <button class="col button button-fill color-red" onclick="ClickButton7()">7</button>
       </p>
       <p class="row">
-        <button class="col button button-fill color-red">8</button>
+        <button class="col button button-fill color-red" onclick="ClickButton8()">8</button>
       </p>  
       <p class="row">
-        <button class="col button button-fill color-yellow">9</button>
+        <button class="col button button-fill color-yellow" onclick="ClickButton9()">9</button>
       </p>
       <p class="row">
-        <button class="col button button-fill color-yellow">10</button>
+        <button class="col button button-fill color-yellow" onclick="ClickButton10()">10</button>
       </p>
 
     <div class="block-title">Treffer der Runde</div>
@@ -76,9 +76,16 @@
             </div>
             <div class="item-inner">
               <div class="item-title item-label">Schuss 1</div>
-              <div class="item-input-wrap">
-                <input type="text" placeholder="links oben">
-                <span class="input-clear-button"></span>
+              <div class="item-input-wrap" id="1schuss">
+                <select id="s1">
+                  <option value="" disabled selected>links oben</option>
+                  <option>Kein Treffer</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
               </div>
             </div>
           </li>
@@ -89,8 +96,15 @@
             <div class="item-inner">
               <div class="item-title item-label">Schuss 2</div>
               <div class="item-input-wrap">
-                <input type="text" placeholder="rechts oben">
-                <span class="input-clear-button"></span>
+                <select id="s2">
+                  <option value="" disabled selected>rechts oben</option>
+                  <option>Kein Treffer</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
               </div>
             </div>
           </li>
@@ -101,8 +115,15 @@
             <div class="item-inner">
               <div class="item-title item-label">Schuss 3</div>
               <div class="item-input-wrap">
-                <input type="text" placeholder="links Mitte">
-                <span class="input-clear-button"></span>
+                <select id="s3">
+                  <option value="" disabled selected>links Mitte</option>
+                  <option>Kein Treffer</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
               </div>
             </div>
           </li>
@@ -113,8 +134,15 @@
             <div class="item-inner">
               <div class="item-title item-label">Schuss 4</div>
               <div class="item-input-wrap">
-                <input type="text" placeholder="rechts Mitte">
-                <span class="input-clear-button"></span>
+                <select id="s4">
+                  <option value="" disabled selected>rechts Mitte</option>
+                  <option>Kein Treffer</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
               </div>
             </div>
           </li>
@@ -125,7 +153,7 @@
             <div class="item-inner">
               <div class="item-title item-label">Schuss 5</div>
               <div class="item-input-wrap">
-                <select>
+                <select id="s5">
                   <option value="" disabled selected>links unten</option>
                   <option>Kein Treffer</option>
                   <option>6</option>
@@ -144,7 +172,7 @@
             <div class="item-inner">
               <div class="item-title item-label">Schuss 6</div>
               <div class="item-input-wrap">
-                <select>
+                <select id="s6">
                   <option value="" disabled selected>rechts unten</option>
                   <option>Kein Treffer</option>
                   <option>6</option>
@@ -156,9 +184,9 @@
               </div>
             </div>
           </li>
-
-        
         </ul>
       </div>
   </div>
 </div>
+
+<script src="alone.js"></script>
