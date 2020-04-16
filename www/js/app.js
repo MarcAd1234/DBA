@@ -33,6 +33,7 @@ var app = new Framework7({
 
 // Play alone
 s = 1;
+Runde = 1;
 erg = 0; 
 console.log(s);
 
@@ -209,7 +210,38 @@ function ClickButton6() {
             }
 
             function CountRound() {
-              document.getElementById("r1").innerHTML = erg;
+              if (Runde == 1){
+                document.getElementById("r1").innerHTML = erg;
+              } else if (Runde ==2){
+                document.getElementById("r2").innerHTML = erg;
+              } else if (Runde ==3){
+                document.getElementById("r3").innerHTML = erg;
+              } else if (Runde ==4){
+                document.getElementById("r4").innerHTML = erg;
+              } else if (Runde ==5){
+                document.getElementById("r5").innerHTML = erg;
+              } else if (Runde ==6){
+                document.getElementById("r6").innerHTML = erg;
+              } else if (Runde ==7){
+                document.getElementById("r7").innerHTML = erg;
+              } else if (Runde ==8){
+                document.getElementById("r8").innerHTML = erg;
+              } else if (Runde ==9){
+                document.getElementById("r9").innerHTML = erg;
+              } else if (Runde ==10){
+                document.getElementById("r10").innerHTML = erg;
+              }
+              
+              document.getElementById("s1").value = "links oben";
+              document.getElementById("s2").value = "rechts oben";
+              document.getElementById("s3").value = "links Mitte";
+              document.getElementById("s4").value = "rechts Mitte";
+              document.getElementById("s5").value = "links unten";
+              document.getElementById("s6").value = "rechts unten";
+              Runde = Runde + 1
+              erg = 0
+              s = 1
+
               };
 
 
