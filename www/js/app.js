@@ -30,14 +30,182 @@ var app = new Framework7({
     path: '/service-worker.js',
   },
 });
-// Login Screen Demo
-$$('#my-login-screen .login-button').on('click', function () {
-  var username = $$('#my-login-screen [name="username"]').val();
-  var password = $$('#my-login-screen [name="password"]').val();
 
-  // Close login screen
-  app.loginScreen.close('#my-login-screen');
+// Play alone
+s = 1;
+erg = 0; 
+console.log(s);
 
-  // Alert username and password
-  app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
-});
+function ClickButton0() {
+      if (s == 1) {
+        erg = erg + 0;
+        s = s + 1;
+        return document.getElementById("s1").value = "Kein Treffer";
+        console.log(s);
+      } else if (s == 2) {
+        erg = erg + 0;
+        s = s + 1;
+        return document.getElementById("s2").value = "Kein Treffer";
+        console.log(s);
+      } else if (s == 3){
+        erg = erg + 0
+        s = s + 1
+        document.getElementById("s3").value = "Kein Treffer"
+      } else if (s == 4){
+        erg = erg + 0
+        s = s + 1
+        document.getElementById("s4").value = "Kein Treffer"
+      } else if (s == 5){
+        erg = erg + 0
+        s = s + 1
+        document.getElementById("s5").value = "Kein Treffer"
+      } else if (s == 6){
+        erg = erg + 0
+        s = 0
+        document.getElementById("s6").value = "Kein Treffer"
+      } 
+    }
+
+
+
+function ClickButton6() {
+    if (s == 1) {
+        erg = erg + 6;
+        s = s + 1;
+        return document.getElementById("s1").value = "6";
+      } else if (s == 2) {
+        erg = erg + 6;
+        s = s + 1;
+        return document.getElementById("s2").value = "6";
+      } else if (s == 3){
+        erg = erg + 6
+        s = s + 1
+        document.getElementById("s3").value = "6"
+      } else if (s == 4){
+        erg = erg + 6
+        s = s + 1
+        document.getElementById("s4").value = "6"
+      } else if (s == 5){
+        erg = erg + 6
+        s = s + 1
+        document.getElementById("s5").value = "6"
+      } else if (s == 6){
+        erg = erg + 6
+        s = 0
+        document.getElementById("s6").value = "6"
+      }
+    }
+
+    function ClickButton7() {
+      if (s == 1) {
+          erg = erg + 7;
+          s = s + 1;
+          return document.getElementById("s1").value = "7";
+        } else if (s == 2) {
+          erg = erg + 7;
+          s = s + 1;
+          return document.getElementById("s2").value = "7";
+        } else if (s == 3){
+          erg = erg + 7
+          s = s + 1
+          document.getElementById("s3").value = "7"
+        } else if (s == 4){
+          erg = erg + 7
+          s = s + 1
+          document.getElementById("s4").value = "7"
+        } else if (s == 5){
+          erg = erg + 7
+          s = s + 1
+          document.getElementById("s5").value = "7"
+        } else if (s == 6){
+          erg = erg + 7
+          s = 0
+          document.getElementById("s6").value = "7"
+        }
+      }
+
+      function ClickButton8() {
+        if (s == 1) {
+            erg = erg + 8;
+            s = s + 1;
+            return document.getElementById("s1").value = "8";
+          } else if (s == 2) {
+            erg = erg + 8;
+            s = s + 1;
+            return document.getElementById("s2").value = "8";
+          } else if (s == 3){
+            erg = erg + 8
+            s = s + 1
+            document.getElementById("s3").value = "8"
+          } else if (s == 4){
+            erg = erg + 8
+            s = s + 1
+            document.getElementById("s4").value = "8"
+          } else if (s == 5){
+            erg = erg + 8
+            s = s + 1
+            document.getElementById("s5").value = "8"
+          } else if (s == 6){
+            erg = erg + 8
+            s = 0
+            document.getElementById("s6").value = "8"
+          }
+        }
+
+        function ClickButton9() {
+          if (s == 1) {
+              erg = erg + 9;
+              s = s + 1;
+              return document.getElementById("s1").value = "9";
+            } else if (s == 2) {
+              erg = erg + 9;
+              s = s + 1;
+              return document.getElementById("s2").value = "9";
+            } else if (s == 3){
+              erg = erg + 7
+              s = s + 1
+              document.getElementById("s3").value = "9"
+            } else if (s == 4){
+              erg = erg + 9
+              s = s + 1
+              document.getElementById("s4").value = "9"
+            } else if (s == 5){
+              erg = erg + 9
+              s = s + 1
+              document.getElementById("s5").value = "9"
+            } else if (s == 6){
+              erg = erg + 9
+              s = 0
+              document.getElementById("s6").value = "9"
+            }
+          }
+
+          function ClickButton10() {
+            if (s == 1) {
+                erg = erg + 10;
+                s = s + 1;
+                return document.getElementById("s1").value = "10";
+              } else if (s == 2) {
+                erg = erg + 10;
+                s = s + 1;
+                return document.getElementById("s2").value = "10";
+              } else if (s == 3){
+                erg = erg + 10
+                s = s + 1
+                document.getElementById("s3").value = "10"
+              } else if (s == 4){
+                erg = erg + 10
+                s = s + 1
+                document.getElementById("s4").value = "10"
+              } else if (s == 5){
+                erg = erg + 10
+                s = s + 1
+                document.getElementById("s5").value = "10"
+              } else if (s == 6){
+                erg = erg + 10
+                s = 0
+                document.getElementById("s6").value = "10"
+              }
+            }
+
+
