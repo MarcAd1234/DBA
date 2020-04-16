@@ -6,6 +6,11 @@ var app = new Framework7({
 
   name: 'DBA', // App name
   theme: 'auto', // Automatic theme detection
+
+  statusbar: {
+    iosOverlaysWebView: true,
+  },
+  
   // App root data
   data: function () {
     return {
