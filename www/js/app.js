@@ -45,29 +45,29 @@ function ClickButton0() {
       if (s == 1) {
         erg = erg + 0;
         s = s + 1;
-        return document.getElementById("s1").value = "Kein Treffer";
+        return document.getElementById("s1").value = "0";
         console.log(s);
       } else if (s == 2) {
         erg = erg + 0;
         s = s + 1;
-        return document.getElementById("s2").value = "Kein Treffer";
+        return document.getElementById("s2").value = "0";
         console.log(s);
       } else if (s == 3){
         erg = erg + 0
         s = s + 1
-        document.getElementById("s3").value = "Kein Treffer"
+        document.getElementById("s3").value = "0"
       } else if (s == 4){
         erg = erg + 0
         s = s + 1
-        document.getElementById("s4").value = "Kein Treffer"
+        document.getElementById("s4").value = "0"
       } else if (s == 5){
         erg = erg + 0
         s = s + 1
-        document.getElementById("s5").value = "Kein Treffer"
+        document.getElementById("s5").value = "0"
       } else if (s == 6){
         erg = erg + 0
         s = 0
-        document.getElementById("s6").value = "Kein Treffer"
+        document.getElementById("s6").value = "0"
       } 
     }
 
@@ -215,25 +215,25 @@ function ClickButton6() {
 
             function CountRound() {
               if (Runde == 1){
-                document.getElementById("r1").innerHTML = erg;
+                document.getElementById("r1").innerHTML = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
               } else if (Runde ==2){
-                document.getElementById("r2").innerHTML = erg;
+                document.getElementById("r2").innerHTML = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
               } else if (Runde ==3){
-                document.getElementById("r3").innerHTML = erg;
+                document.getElementById("r3").innerHTML = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
               } else if (Runde ==4){
-                document.getElementById("r4").innerHTML = erg;
+                document.getElementById("r4").innerHTML = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
               } else if (Runde ==5){
-                document.getElementById("r5").innerHTML = erg;
+                document.getElementById("r5").innerHTML = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
               } else if (Runde ==6){
-                document.getElementById("r6").innerHTML = erg;
+                document.getElementById("r6").innerHTML = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
               } else if (Runde ==7){
-                document.getElementById("r7").innerHTML = erg;
+                document.getElementById("r7").innerHTML = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
               } else if (Runde ==8){
-                document.getElementById("r8").innerHTML = erg;
+                document.getElementById("r8").innerHTML = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
               } else if (Runde ==9){
-                document.getElementById("r9").innerHTML = erg;
+                document.getElementById("r9").innerHTML = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
               } else if (Runde ==10){
-                document.getElementById("r10").innerHTML = erg;
+                document.getElementById("r10").innerHTML = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
               }
               
               document.getElementById("s1").value = "links oben";
@@ -243,11 +243,23 @@ function ClickButton6() {
               document.getElementById("s5").value = "links unten";
               document.getElementById("s6").value = "rechts unten";
               Runde = Runde + 1
-              ergGesamt = ergGesamt + erg
+              ergGesamt = parseInt(document.getElementById("r1").innerHTML) + parseInt(document.getElementById("r2").innerHTML) + parseInt(document.getElementById("r3").innerHTML) + parseInt(document.getElementById("r4").innerHTML) + parseInt(document.getElementById("r5").innerHTML) + parseInt(document.getElementById("r6").innerHTML) + parseInt(document.getElementById("r7").innerHTML) + parseInt(document.getElementById("r8").innerHTML) + parseInt(document.getElementById("r9").innerHTML) + parseInt(document.getElementById("r10").innerHTML)
               document.getElementById("ergGesamt").innerHTML = ergGesamt
-              erg = 0
               s = 1
 
+              if (Runde == 11){
+                app.dialog.alert('Du hast in dieser Partie '+ ergGesamt + " Punkte erzielt");
+                Runde = 1
+              } 
+
               };
+
+
+
+
+
+
+
+
 
 
