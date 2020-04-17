@@ -12,6 +12,10 @@ var routes = [
     path: '/together/',
     url: './pages/together.html',
   },
+  {
+    path: '/regelwerk/',
+    url: './pages/regelwerk.html',
+  },
 
 
   {
