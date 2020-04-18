@@ -108,3 +108,5 @@ self.__WB_MANIFEST = [
   It is better to comment next line during development
 */
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST || []);
+
+
