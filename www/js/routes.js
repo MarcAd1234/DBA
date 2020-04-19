@@ -13,6 +13,11 @@ var routes = [
     url: './pages/together.html',
   },
   {
+    path: '/together2/',
+    url: './pages/together2.html',
+    asyncComponent: () => import('./app.js'),
+  },
+  {
     path: '/regelwerk/',
     url: './pages/regelwerk.html',
   },
