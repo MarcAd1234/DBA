@@ -304,7 +304,7 @@ function ClickButton6() {
               Name2 = document.getElementById("Name2").value
               
               if (isNaN(Name1 && Name2)){
-                router.navigate({ name: "together2" });
+                //router.navigate({ name: "together2" });
               } else {
                 app.dialog.alert("Bitte gebe die Namen der Spieler an");
               }
