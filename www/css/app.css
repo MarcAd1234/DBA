@@ -4,7 +4,7 @@
   left: 1px;
 }
 
-/* :root {
+:root {
     --f7-navbar-bg-color: rgb(170, 169, 169) !important;
     --f7-navbar-hide-show-transition-duration: 400ms;
     --f7-navbar-title-line-height: 1.2;
@@ -14,7 +14,7 @@
     --f7-navbar-large-title-text-color: black;
     --f7-navbar-large-title-padding-left: 16px;
     --f7-navbar-large-title-padding-right: 16px;
-} */
+}
 
 table {
     border-collapse: collapse;
