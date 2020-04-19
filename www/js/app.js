@@ -7,22 +7,6 @@ var app = new Framework7({
   name: 'DBA', // App name
   theme: 'auto', // Automatic theme detection
 
-  // App root data
-  data: function () {
-    return {
-      user: {
-        firstName: 'John',
-        lastName: 'Doe',
-      },
-
-    };
-  },
-  // App root methods
-  methods: {
-    helloWorld: function () {
-      app.dialog.alert('Hello World!');
-    },
-  },
   // App routes
   routes: routes,
   // Register service worker
@@ -310,6 +294,20 @@ function ClickButton6() {
                 Runde = 1
               } 
 
+            }
+
+
+            // Zu Zweit
+
+            function StartTwo() {
+              Name1 = document.getElementById("Name1").value
+              Name2 = document.getElementById("Name2").value
+              
+              if (isNaN(Name1 && Name2)){
+                open("/together2/");
+              } else {
+                app.dialog.alert("Bitte gebe die Namen der Spieler an");
+              }
             }
 
 

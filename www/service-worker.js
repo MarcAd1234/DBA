@@ -68,6 +68,14 @@ self.__WB_MANIFEST = [
     revision: '1',
     url: './index.html'
   },
+  {
+    revision: '1',
+    url: './alone.html'
+  },
+  {
+    revision: '1',
+    url: './together.html'
+  },
   // Icons
   {
     revision: '1',
