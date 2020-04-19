@@ -13,9 +13,9 @@ var routes = [
     url: './pages/together.html',
   },
   {
+    name: together2
     path: '/together2/',
     url: './pages/together2.html',
-    asyncComponent: () => import('./app.js'),
   },
   {
     path: '/regelwerk/',
