@@ -13,7 +13,7 @@ var routes = [
     url: './pages/together.html',
   },
   {
-    name: together2
+    name: "together2",
     path: '/together2/',
     url: './pages/together2.html',
   },
@@ -77,6 +77,9 @@ var routes = [
       }, 1000);
     },
   },
+
+
+  
   // Default route (404 page). MUST BE THE LAST
   {
     path: '(.*)',

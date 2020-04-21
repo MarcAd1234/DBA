@@ -2,6 +2,7 @@ var $$ = Dom7;
 
 var app = new Framework7({
   root: '#app', // App root element
+  
 
 
   name: 'DBA', // App name
@@ -44,6 +45,16 @@ window.addEventListener('beforeinstallprompt', (e) => {
       });
   });
 });
+
+
+// Refresh Page
+function reloadButton() {
+  view.router.navigate(router.currentRoute.url, {
+    reloadAll: true,
+    ignoreCache: true,
+  });
+}
+
 
 
 // Play alone
@@ -296,19 +307,18 @@ function ClickButton6() {
 
             }
 
-
             // Zu Zweit
 
             function StartTwo() {
-              Name1 = document.getElementById("Name1").value
-              Name2 = document.getElementById("Name2").value
+              Name1 = document.getElementById("Name1").value;
+              Name2 = document.getElementById("Name2").value;
               
               if (isNaN(Name1 && Name2)){
-                //router.navigate({ name: "together2" });
+                router.navigate("/together2/");
               } else {
                 app.dialog.alert("Bitte gebe die Namen der Spieler an");
               }
-            }
+            };
 
 
              
