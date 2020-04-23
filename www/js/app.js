@@ -2,11 +2,9 @@ var $$ = Dom7;
 
 var app = new Framework7({
   root: '#app', // App root element
-  
-
-
   name: 'DBA', // App name
   theme: 'auto', // Automatic theme detection
+  view: {stackPages: true},
 
   // App routes
   routes: routes,
@@ -15,6 +13,10 @@ var app = new Framework7({
     path: '/service-worker.js',
   },
 });
+
+// Add and init View
+var view = app.views.create('.view-main');
+
 
 // Add to homescreen -- https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen
 let deferredPrompt;
@@ -45,6 +47,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
       });
   });
 });
+ 
 
 
 // Refresh Page
@@ -53,7 +56,7 @@ function reloadButton() {
     reloadAll: true,
     ignoreCache: true,
   });
-}
+};
 
 
 
@@ -312,13 +315,145 @@ function ClickButton6() {
             function StartTwo() {
               Name1 = document.getElementById("Name1").value;
               Name2 = document.getElementById("Name2").value;
-              
+              Name1S = String(Name1)
+              Name2S = String(Name2)
+            {
               if (isNaN(Name1 && Name2)){
-                router.navigate("/together2/");
+                view.router.navigate("/together2/");
               } else {
                 app.dialog.alert("Bitte gebe die Namen der Spieler an");
               }
+            }
             };
+ 
+            function BeginnGameWithTwo() {
+            document.getElementById("SA").innerHTML = Name1S;
+            document.getElementById("SB").innerHTML = Name2S;
+            document.getElementById("GesamtA").innerHTML = ("Gesamt " + Name1S);
+            document.getElementById("GesamtB").innerHTML = ("Gesamt " + Name2S);
+            document.getElementById("configInfo").innerHTML = ("Konfiguration: ");
+            s = 1;
+            RundeA = 1;
+            RundeB = 1;
+            StartingDuell()
+            };
+
+
+            function StartingDuell(){
+              document.getElementById("playerATM").innerHTML = (Name1S + " ist gerade dran");
+              document.getElementById("AbgabeButton").innerHTML = ("Runde für " + Name1S + " abgeben")
+
+
+
+            }
+
+
+            function CountRoundDuell() {
+              x = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
+              if (RundeA == 1){
+                if (isNaN(x)) {
+                  app.dialog.alert("Bitte fülle alle Schussfelder aus!");
+                } 
+                else {
+                  document.getElementById("r1SA").innerHTML = x;
+                  GetRidOff()
+                }
+              } else if (RundeA ==2){
+                if (isNaN(x)) {
+                  app.dialog.alert("Bitte fülle alle Schussfelder aus!");
+                } 
+                else {
+                  document.getElementById("r2SA").innerHTML = x;
+                  GetRidOff()
+                }
+              } else if (RundeA ==3){
+                if (isNaN(x)) {
+                  app.dialog.alert("Bitte fülle alle Schussfelder aus!");
+                } 
+                else {
+                  document.getElementById("r3SA").innerHTML = x;
+                  GetRidOff()
+                }
+              } else if (RundeA ==4){
+                if (isNaN(x)) {
+                  app.dialog.alert("Bitte fülle alle Schussfelder aus!");
+                } 
+                else {
+                  document.getElementById("r4SA").innerHTML = x;
+                  GetRidOff()
+                }
+              } else if (RundeA ==5){
+                if (isNaN(x)) {
+                  app.dialog.alert("Bitte fülle alle Schussfelder aus!");
+                } 
+                else {
+                  document.getElementById("r5SA").innerHTML = x;
+                  GetRidOff()
+                }
+              } else if (RundeA ==6){
+                if (isNaN(x)) {
+                  app.dialog.alert("Bitte fülle alle Schussfelder aus!");
+                } 
+                else {
+                  document.getElementById("r6SA").innerHTML = x;
+                  GetRidOff()
+                }
+              } else if (RundeA ==7){
+                if (isNaN(x)) {
+                  app.dialog.alert("Bitte fülle alle Schussfelder aus!");
+                } 
+                else {
+                  document.getElementById("r7SA").innerHTML = x;
+                  GetRidOff()
+                }
+              } else if (RundeA ==8){
+                if (isNaN(x)) {
+                  app.dialog.alert("Bitte fülle alle Schussfelder aus!");
+                } 
+                else {
+                  document.getElementById("r8SA").innerHTML = x;
+                  GetRidOff()
+                }
+              } else if (RundeA ==9){
+                if (isNaN(x)) {
+                  app.dialog.alert("Bitte fülle alle Schussfelder aus!");
+                } 
+                else {
+                  document.getElementById("r9SA").innerHTML = x;
+                  GetRidOff()
+                }
+              } else if (RundeA ==10){
+                if (isNaN(x)) {
+                  app.dialog.alert("Bitte fülle alle Schussfelder aus!");
+                } 
+                else {
+                  document.getElementById("r10SA").innerHTML = x;
+                  GetRidOff()
+                }
+              }
+            };
+
+            function GetRidOff() {
+              document.getElementById("s1").value = "links oben";
+              document.getElementById("s2").value = "rechts oben";
+              document.getElementById("s3").value = "links Mitte";
+              document.getElementById("s4").value = "rechts Mitte";
+              document.getElementById("s5").value = "links unten";
+              document.getElementById("s6").value = "rechts unten";
+              ergGesamtA = parseInt(document.getElementById("r1SA").innerHTML) + parseInt(document.getElementById("r2SA").innerHTML) + parseInt(document.getElementById("r3SA").innerHTML) + parseInt(document.getElementById("r4SA").innerHTML) + parseInt(document.getElementById("r5SA").innerHTML) + parseInt(document.getElementById("r6SA").innerHTML) + parseInt(document.getElementById("r7SA").innerHTML) + parseInt(document.getElementById("r8SA").innerHTML) + parseInt(document.getElementById("r9SA").innerHTML) + parseInt(document.getElementById("r10SA").innerHTML)
+              ergGesamtB = parseInt(document.getElementById("r1SB").innerHTML) + parseInt(document.getElementById("r2SB").innerHTML) + parseInt(document.getElementById("r3SB").innerHTML) + parseInt(document.getElementById("r4SB").innerHTML) + parseInt(document.getElementById("r5SB").innerHTML) + parseInt(document.getElementById("r6SB").innerHTML) + parseInt(document.getElementById("r7SB").innerHTML) + parseInt(document.getElementById("r8SB").innerHTML) + parseInt(document.getElementById("r9SB").innerHTML) + parseInt(document.getElementById("r10SB").innerHTML)
+              document.getElementById("ergGesamtA").innerHTML = ergGesamtA
+              document.getElementById("ergGesamtB").innerHTML = ergGesamtB
+              s = 1
+
+              if (RundeB == 11){
+                app.dialog.alert("Das Spiel ist beendet!");
+                Runde = 1
+              } 
+
+            }
+
+
 
 
              

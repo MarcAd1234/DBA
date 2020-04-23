@@ -3,7 +3,7 @@
     <div class="navbar-bg"></div>
     <div class="navbar-inner sliding">
       <div class="left">
-        <a href="#" class="link back">
+        <a href="/together/" class="link back">
           <i class="icon icon-back"></i>
           <span class="if-not-md">Zurück</span>
         </a>
@@ -13,10 +13,227 @@
   </div>
   <div class="page-content">
 
+    <div class="block-title">Rundenübersicht</div>
+    <div class="block">
+    <button class="col button button-fill color-green" onclick = "style.display='none'; BeginnGameWithTwo()">Lade Namen und lege los!</button>
+    <p id="configInfo"></p>
+    </div>
+
+    <script>
+      document.getElementById("SA").innerHTML = Name1S;
+      document.getElementById("SB").innerHTML = Name2S;
+      document.getElementById("GesamtA").innerHTML = ("Gesamt " + Name1S);
+    </script>
+    <div id="Anzeige">
+    <div class="block">
+    <table>
+      <tr>
+        <th>Runde</th>
+        <td>1.</td>
+        <td>2.</td>
+        <td>3.</td>
+        <td>4.</td>
+        <td>5.</td>
+        <td>6.</td>
+        <td>7.</td>
+        <td>8.</td>
+        <td>9.</td>
+        <td>10.</td>
+      </tr>
+      <tr>
+        <th id="SA">Spieler A</th>
+        <td id="r1SA">0</td>
+        <td id="r2SA">0</td>
+        <td id="r3SA">0</td>
+        <td id="r4SA">0</td>
+        <td id="r5SA">0</td>
+        <td id="r6SA">0</td>
+        <td id="r7SA">0</td>
+        <td id="r8SA">0</td>
+        <td id="r9SA">0</td>
+        <td id="r10SA">0</td>
+       </tr>
+       <tr>
+        <th id="SB">Spieler B</th>
+        <td id="r1SB">0</td>
+        <td id="r2SB">0</td>
+        <td id="r3SB">0</td>
+        <td id="r4SB">0</td>
+        <td id="r5SB">0</td>
+        <td id="r6SB">0</td>
+        <td id="r7SB">0</td>
+        <td id="r8SB">0</td>
+        <td id="r9SB">0</td>
+        <td id="r10SB">0</td>
+       </tr>
+    </table>
+  </div>
+  
+    <div class="block">
+      <table>
+        <tr>
+          <td id="GesamtA">Gesamt A:</td>
+          <td id="GesamtB">Gesamt B:</td>
+        </tr>
+        <tr>
+          <td id="ergGesamtA">0</td>
+          <td id="ergGesamtB">0</td>
+        </tr>
+      </table>
+    </div>
+
   
 
+    <div class="block-title">Treffer eintragen</div>
+    <div class="block">
+      <p id="playerATM"></p>
+      <p class="row">
+        <button class="col button button-fill color-black" onclick="ClickButton0()">kein Treffer</button>
+      </p>
+      <p class="row">
+        <button class="col button button-fill color-blue" onclick="ClickButton6()">6</button>
+      </p>
+      <p class="row">
+        <button class="col button button-fill color-red" onclick="ClickButton7()">7</button>
+      </p>
+      <p class="row">
+        <button class="col button button-fill color-red" onclick="ClickButton8()">8</button>
+      </p>  
+      <p class="row">
+        <button class="col button button-fill color-yellow" onclick="ClickButton9()">9</button>
+      </p>
+      <p class="row">
+        <button class="col button button-fill color-yellow" onclick="ClickButton10()">10</button>
+      </p>
+
+    <div class="block-title">Treffer der Runde</div>
+      <div class="list inline-labels no-hairlines-md">
+        <ul>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="icon demo-list-icon"></i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-label">Schuss 1</div>
+              <div class="item-input-wrap" id="1schuss">
+                <select id="s1">
+                  <option value="" disabled selected>links oben</option>
+                  <option>0</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="icon demo-list-icon"></i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-label">Schuss 2</div>
+              <div class="item-input-wrap">
+                <select id="s2">
+                  <option value="" disabled selected>rechts oben</option>
+                  <option>0</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="icon demo-list-icon"></i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-label">Schuss 3</div>
+              <div class="item-input-wrap">
+                <select id="s3">
+                  <option value="" disabled selected>links Mitte</option>
+                  <option>0</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="icon demo-list-icon"></i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-label">Schuss 4</div>
+              <div class="item-input-wrap">
+                <select id="s4">
+                  <option value="" disabled selected>rechts Mitte</option>
+                  <option>0</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="icon demo-list-icon"></i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-label">Schuss 5</div>
+              <div class="item-input-wrap">
+                <select id="s5">
+                  <option value="" disabled selected>links unten</option>
+                  <option>0</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-media">
+              <i class="icon demo-list-icon"></i>
+            </div>
+            <div class="item-inner">
+              <div class="item-title item-label">Schuss 6</div>
+              <div class="item-input-wrap">
+                <select id="s6">
+                  <option value="" disabled selected>rechts unten</option>
+                  <option>0</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    <button class="col button button-fill color-green" onclick="CountRoundDuell()" id="AbgabeButton">Runde abgeben</button>
+      
   </div>
+
 </div>
+
+</div>
+
 
 
 
