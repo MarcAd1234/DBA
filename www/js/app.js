@@ -428,12 +428,12 @@ function ClickButton6() {
                 } 
                 else {
                   document.getElementById("r10SA").innerHTML = x;
-                  GetRidOff()
+                  GetRidOff2()
                 }
               }
             };
 
-            function GetRidOff() {
+            function GetRidOff2() {
               document.getElementById("s1").value = "links oben";
               document.getElementById("s2").value = "rechts oben";
               document.getElementById("s3").value = "links Mitte";
