@@ -334,106 +334,149 @@ function ClickButton6() {
             document.getElementById("configInfo").innerHTML = ("Konfiguration: ");
             s = 1;
             RundeA = 1;
-            RundeB = 1;
-            StartingDuell()
+            RundeB = 0.5;
+            document.getElementById("playerATM").innerHTML = (Name1S + " ist gerade dran");
+            document.getElementById("AbgabeButton").innerHTML = ("Runde für " + Name1S + " abgeben")
             };
 
-
-            function StartingDuell(){
-              document.getElementById("playerATM").innerHTML = (Name1S + " ist gerade dran");
-              document.getElementById("AbgabeButton").innerHTML = ("Runde für " + Name1S + " abgeben")
-
-
-
-            }
 
 
             function CountRoundDuell() {
               x = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
-              if (RundeA == 1){
+              if (RundeA == 1 || RundeB == 1){
                 if (isNaN(x)) {
                   app.dialog.alert("Bitte fülle alle Schussfelder aus!");
                 } 
                 else {
-                  document.getElementById("r1SA").innerHTML = x;
-                  GetRidOff()
+                  if (RundeA == 1){
+                     document.getElementById("r1SA").innerHTML = x;
+                     GetRidOffA()
+                  } else if (RundeB == 1){
+                    document.getElementById("r1SB").innerHTML = x;
+                    GetRidOffB()
+                  }
                 }
-              } else if (RundeA ==2){
+              } else if (RundeA == 2 || RundeB == 2){
                 if (isNaN(x)) {
                   app.dialog.alert("Bitte fülle alle Schussfelder aus!");
                 } 
                 else {
-                  document.getElementById("r2SA").innerHTML = x;
-                  GetRidOff()
+                  if (RundeA == 2){
+                     document.getElementById("r2SA").innerHTML = x;
+                     GetRidOffA()
+                  } else if (RundeB == 2){
+                    document.getElementById("r2SB").innerHTML = x;
+                    GetRidOffB()
+                  }
                 }
-              } else if (RundeA ==3){
+              } else if (RundeA == 3 || RundeB == 3){
                 if (isNaN(x)) {
                   app.dialog.alert("Bitte fülle alle Schussfelder aus!");
                 } 
                 else {
-                  document.getElementById("r3SA").innerHTML = x;
-                  GetRidOff()
+                  if (RundeA == 3){
+                     document.getElementById("r3SA").innerHTML = x;
+                     GetRidOffA()
+                  } else if (RundeB == 3){
+                    document.getElementById("r3SB").innerHTML = x;
+                    GetRidOffB()
+                  }
                 }
-              } else if (RundeA ==4){
+              } else if (RundeA == 4 || RundeB == 4){
                 if (isNaN(x)) {
                   app.dialog.alert("Bitte fülle alle Schussfelder aus!");
                 } 
                 else {
-                  document.getElementById("r4SA").innerHTML = x;
-                  GetRidOff()
+                  if (RundeA == 4){
+                     document.getElementById("r4SA").innerHTML = x;
+                     GetRidOffA()
+                  } else if (RundeB == 4){
+                    document.getElementById("r4SB").innerHTML = x;
+                    GetRidOffB()
+                  }
                 }
-              } else if (RundeA ==5){
+              } else if (RundeA == 5 || RundeB == 5){
                 if (isNaN(x)) {
                   app.dialog.alert("Bitte fülle alle Schussfelder aus!");
                 } 
                 else {
-                  document.getElementById("r5SA").innerHTML = x;
-                  GetRidOff()
+                  if (RundeA == 5){
+                     document.getElementById("r5SA").innerHTML = x;
+                     GetRidOffA()
+                  } else if (RundeB == 5){
+                    document.getElementById("r5SB").innerHTML = x;
+                    GetRidOffB()
+                  }
                 }
-              } else if (RundeA ==6){
+              } else if (RundeA == 6 || RundeB == 6){
                 if (isNaN(x)) {
                   app.dialog.alert("Bitte fülle alle Schussfelder aus!");
                 } 
                 else {
-                  document.getElementById("r6SA").innerHTML = x;
-                  GetRidOff()
+                  if (RundeA == 6){
+                     document.getElementById("r6SA").innerHTML = x;
+                     GetRidOffA()
+                  } else if (RundeB == 6){
+                    document.getElementById("r6SB").innerHTML = x;
+                    GetRidOffB()
+                  }
                 }
-              } else if (RundeA ==7){
+              } else if (RundeA == 7 || RundeB == 7){
                 if (isNaN(x)) {
                   app.dialog.alert("Bitte fülle alle Schussfelder aus!");
                 } 
                 else {
-                  document.getElementById("r7SA").innerHTML = x;
-                  GetRidOff()
+                  if (RundeA == 7){
+                     document.getElementById("r7SA").innerHTML = x;
+                     GetRidOffA()
+                  } else if (RundeB == 7){
+                    document.getElementById("r7SB").innerHTML = x;
+                    GetRidOffB()
+                  }
                 }
-              } else if (RundeA ==8){
+              } else if (RundeA == 8 || RundeB == 8){
                 if (isNaN(x)) {
                   app.dialog.alert("Bitte fülle alle Schussfelder aus!");
                 } 
                 else {
-                  document.getElementById("r8SA").innerHTML = x;
-                  GetRidOff()
+                  if (RundeA == 8){
+                     document.getElementById("r8SA").innerHTML = x;
+                     GetRidOffA()
+                  } else if (RundeB == 8){
+                    document.getElementById("r8SB").innerHTML = x;
+                    GetRidOffB()
+                  }
                 }
-              } else if (RundeA ==9){
+              } else if (RundeA == 9 || RundeB == 9){
                 if (isNaN(x)) {
                   app.dialog.alert("Bitte fülle alle Schussfelder aus!");
                 } 
                 else {
-                  document.getElementById("r9SA").innerHTML = x;
-                  GetRidOff()
+                  if (RundeA == 9){
+                     document.getElementById("r9SA").innerHTML = x;
+                     GetRidOffA()
+                  } else if (RundeB == 9){
+                    document.getElementById("r9SB").innerHTML = x;
+                    GetRidOffB()
+                  }
                 }
-              } else if (RundeA ==10){
-                if (isNaN(x)) {
-                  app.dialog.alert("Bitte fülle alle Schussfelder aus!");
-                } 
-                else {
-                  document.getElementById("r10SA").innerHTML = x;
-                  GetRidOff2()
-                }
-              }
+              } else if (RundeA == 10 || RundeB == 10){
+                  if (isNaN(x)) {
+                    app.dialog.alert("Bitte fülle alle Schussfelder aus!");
+                  } 
+                  else {
+                    if (RundeA == 10){
+                       document.getElementById("r10SA").innerHTML = x;
+                       GetRidOffA()
+                    } else if (RundeB == 10){
+                      document.getElementById("r10SB").innerHTML = x;
+                      GetRidOffB()
+                    }
+                  }  
             };
+          }
 
-            function GetRidOff2() {
+            function GetRidOffA() {
               document.getElementById("s1").value = "links oben";
               document.getElementById("s2").value = "rechts oben";
               document.getElementById("s3").value = "links Mitte";
@@ -441,29 +484,36 @@ function ClickButton6() {
               document.getElementById("s5").value = "links unten";
               document.getElementById("s6").value = "rechts unten";
               ergGesamtA = parseInt(document.getElementById("r1SA").innerHTML) + parseInt(document.getElementById("r2SA").innerHTML) + parseInt(document.getElementById("r3SA").innerHTML) + parseInt(document.getElementById("r4SA").innerHTML) + parseInt(document.getElementById("r5SA").innerHTML) + parseInt(document.getElementById("r6SA").innerHTML) + parseInt(document.getElementById("r7SA").innerHTML) + parseInt(document.getElementById("r8SA").innerHTML) + parseInt(document.getElementById("r9SA").innerHTML) + parseInt(document.getElementById("r10SA").innerHTML)
-              ergGesamtB = parseInt(document.getElementById("r1SB").innerHTML) + parseInt(document.getElementById("r2SB").innerHTML) + parseInt(document.getElementById("r3SB").innerHTML) + parseInt(document.getElementById("r4SB").innerHTML) + parseInt(document.getElementById("r5SB").innerHTML) + parseInt(document.getElementById("r6SB").innerHTML) + parseInt(document.getElementById("r7SB").innerHTML) + parseInt(document.getElementById("r8SB").innerHTML) + parseInt(document.getElementById("r9SB").innerHTML) + parseInt(document.getElementById("r10SB").innerHTML)
               document.getElementById("ergGesamtA").innerHTML = ergGesamtA
+              s = 1
+              RundeA = RundeA + 0.5
+              RundeB = RundeB + 0.5
+              document.getElementById("playerATM").innerHTML = (Name2S + " ist gerade dran");
+              document.getElementById("AbgabeButton").innerHTML = ("Runde für " + Name2S + " abgeben")
+
+/*               if (RundeB == 11){
+                app.dialog.alert("Das Spiel ist beendet!");
+                Runde = 1
+              };  */
+            }
+
+            function GetRidOffB() {
+              document.getElementById("s1").value = "links oben";
+              document.getElementById("s2").value = "rechts oben";
+              document.getElementById("s3").value = "links Mitte";
+              document.getElementById("s4").value = "rechts Mitte";
+              document.getElementById("s5").value = "links unten";
+              document.getElementById("s6").value = "rechts unten";
+              ergGesamtB = parseInt(document.getElementById("r1SB").innerHTML) + parseInt(document.getElementById("r2SB").innerHTML) + parseInt(document.getElementById("r3SB").innerHTML) + parseInt(document.getElementById("r4SB").innerHTML) + parseInt(document.getElementById("r5SB").innerHTML) + parseInt(document.getElementById("r6SB").innerHTML) + parseInt(document.getElementById("r7SB").innerHTML) + parseInt(document.getElementById("r8SB").innerHTML) + parseInt(document.getElementById("r9SB").innerHTML) + parseInt(document.getElementById("r10SB").innerHTML)
               document.getElementById("ergGesamtB").innerHTML = ergGesamtB
               s = 1
-
+              RundeA = RundeA + 0.5
+              RundeB = RundeB + 0.5
+              document.getElementById("playerATM").innerHTML = (Name1S + " ist gerade dran");
+              document.getElementById("AbgabeButton").innerHTML = ("Runde für " + Name1S + " abgeben")
+/* 
               if (RundeB == 11){
                 app.dialog.alert("Das Spiel ist beendet!");
                 Runde = 1
-              } 
-
+              }; */
             }
-
-
-
-
-             
-
-
-
-
-
-
-
-
-
-
