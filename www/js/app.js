@@ -331,7 +331,18 @@ function ClickButton6() {
             document.getElementById("SB").innerHTML = Name2S;
             document.getElementById("GesamtA").innerHTML = ("Gesamt " + Name1S);
             document.getElementById("GesamtB").innerHTML = ("Gesamt " + Name2S);
-            document.getElementById("configInfo").innerHTML = ("Konfiguration: ");
+            // Konfiguration aus Radio List: https://stackoverflow.com/questions/15839169/how-to-get-value-of-selected-radio-button
+            if(document.getElementById('radio10').checked){
+              konfig_value = document.getElementById('radio10').value;
+            
+            }else if(document.getElementById('radio8').checked){
+              konfig_value = document.getElementById('radio8').value;
+            
+            }else if(document.getElementById('radioFREE').checked){
+              konfig_value = document.getElementById('radioFREE').value;
+            }
+            document.getElementById("configInfo").innerHTML = ("Konfiguration: " + konfig_value);
+
             s = 1;
             RundeA = 1;
             RundeB = 0.5;
@@ -490,11 +501,6 @@ function ClickButton6() {
               RundeB = RundeB + 0.5
               document.getElementById("playerATM").innerHTML = (Name2S + " ist gerade dran");
               document.getElementById("AbgabeButton").innerHTML = ("Runde für " + Name2S + " abgeben")
-
-/*               if (RundeB == 11){
-                app.dialog.alert("Das Spiel ist beendet!");
-                Runde = 1
-              };  */
             }
 
             function GetRidOffB() {
@@ -511,9 +517,17 @@ function ClickButton6() {
               RundeB = RundeB + 0.5
               document.getElementById("playerATM").innerHTML = (Name1S + " ist gerade dran");
               document.getElementById("AbgabeButton").innerHTML = ("Runde für " + Name1S + " abgeben")
-/* 
-              if (RundeB == 11){
-                app.dialog.alert("Das Spiel ist beendet!");
-                Runde = 1
-              }; */
+              if (RundeB == 10.5){
+                EndeA = document.getElementById("ergGesamtA").innerHTML
+                EndeB = document.getElementById("ergGesamtB").innerHTML
+                if (EndeA > EndeB) {
+                  app.dialog.alert("Das Spiel ist beendet! " + Name1S + " hat gewonnen")
+                  document.getElementById("playerATM").innerHTML = (Name1S + " hat bereits gewonnen")
+                } else {
+                  app.dialog.alert("Das Spiel ist beendet! " + Name2S + " hat gewonnen")
+                  document.getElementById("playerATM").innerHTML = (Name2S + " hat bereits gewonnen")
+                }
+                Runde = 0
+                document.getElementById("AbgabeButton").innerHTML = ("...");
+              }; 
             }
