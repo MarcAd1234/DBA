@@ -21,6 +21,10 @@ var routes = [
     path: '/regelwerk/',
     url: './pages/regelwerk.html',
   },
+  {
+    path: '/settings/',
+    url: './pages/settings.html',
+  },
 
 
   {

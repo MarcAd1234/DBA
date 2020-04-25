@@ -1,10 +1,16 @@
 var $$ = Dom7;
 
+// Theme
+var theme = 'auto';
+if (document.location.search.indexOf('theme=') >= 0) {
+  theme = document.location.search.split('theme=')[1].split('&')[0];
+}
+
 var app = new Framework7({
   root: '#app', // App root element
   name: 'DBA', // App name
-  theme: 'auto', // Automatic theme detection
-  view: {stackPages: true},
+  theme: theme,
+  autoDarkTheme: false,
 
   // App routes
   routes: routes,
@@ -48,6 +54,15 @@ window.addEventListener('beforeinstallprompt', (e) => {
   });
 });
  
+
+// Enable Dark Theme
+function darkthemeklick {
+  app = {
+    autoDarkTheme: false,
+  }
+
+}
+
 
 
 // Refresh Page
