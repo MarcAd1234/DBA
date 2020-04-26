@@ -11,6 +11,7 @@ var app = new Framework7({
   name: 'DBA', // App name
   theme: theme,
   autoDarkTheme: false,
+  
 
   // App routes
   routes: routes,
@@ -63,9 +64,12 @@ function darkthemeklick() {
 
 
 // Refresh Page
-/* function reloadButton() {
-  view.router.navigate("/", ignoreCache: "true")
-}; */
+ function reloadButton() {
+  caches.keys().then(function(names) {
+    for (let name of names)
+        caches.delete(name);
+});
+};
 
 
 // Play alone
