@@ -64,9 +64,8 @@ function darkthemeklick() {
 
 // Refresh Page
 /* function reloadButton() {
-  view.router.navigate("/", ignoreCache: true)
-};
- */
+  view.router.navigate("/", ignoreCache: "true")
+}; */
 
 
 // Play alone

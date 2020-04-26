@@ -2,15 +2,6 @@
 <html id="htmlpage">
 <head>
   <meta charset="utf-8">
-  <!--
-  Customize this policy to fit your own app's needs. For more guidance, see:
-      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-  Some notes:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-      * Enable inline JS: add 'unsafe-inline' to default-src
-  -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
   
@@ -37,6 +28,10 @@
   <!-- Add to homescreen -- https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen -->
   <button class="add-button">Add to home screen</button>
 
+    <!-- main view, should have "view-main" class -->
+    <div class="view view-main view-init safe-areas">
+      <div class="page" data-name="home">
+
   <div id="app">
     <!-- Left panel with cover effect-->
     <div class="panel panel-left panel-cover theme-dark panel-init">
@@ -52,7 +47,7 @@
             <div class="block">
               <p>Bitte klicke den untenstehenden Button um Updates der App zu laden</p>
               <div class="block">
-                <button class="col button button-fill color-blue" onclick="reloadButton()"><div>Updates!</button>
+                <button class="col button button-fill color-blue" onclick="reloadButton()">Updates!</button>
               </div>
               <p>Die Blasrohr App (DBA) befindet sich derzeit in Entwicklung. Es handelt sich um eine Progressive Web App</p>
               <p>von Marc Adrian</p>
@@ -61,11 +56,6 @@
         </div>
       </div>
     </div>
-
-    
-    <!-- Your main view, should have "view-main" class -->
-    <div class="view view-main view-init safe-areas">
-      <div class="page" data-name="home">
 
         <!-- Top Navbar -->
         <div class="navbar navbar-large">
@@ -157,7 +147,7 @@
               <li>
                 <a href="x" class="item-content item-link">
                   <div class="item-inner">
-                    <div class="item-title">Shop: Blasrohr und dies&das</div>
+                    <div class="item-title">Shop</div>
                   </div>
                 </a>
               </li>
