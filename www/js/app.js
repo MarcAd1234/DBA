@@ -56,11 +56,8 @@ window.addEventListener('beforeinstallprompt', (e) => {
  
 
 // Enable Dark Theme
-function darkthemeklick {
-  app = {
-    autoDarkTheme: false,
-  }
-
+function darkthemeklick() {
+  
 }
 
 
