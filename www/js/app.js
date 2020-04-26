@@ -64,10 +64,7 @@ function darkthemeklick() {
 
 // Refresh Page
 function reloadButton() {
-  view.router.navigate(router.currentRoute.url, {
-    reloadAll: true,
-    ignoreCache: true,
-  });
+  view.router.navigate("/", ignoreCache: true)
 };
 
 
