@@ -63,10 +63,10 @@ function darkthemeklick() {
 
 
 // Refresh Page
-function reloadButton() {
+/* function reloadButton() {
   view.router.navigate("/", ignoreCache: true)
 };
-
+ */
 
 
 // Play alone
