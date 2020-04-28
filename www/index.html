@@ -15,7 +15,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="icon" href="assets/icons/favicon.png">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="DBA/www/manifest.json">
   
   <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
   <link rel="stylesheet" href="css/icons.css">
@@ -206,6 +206,19 @@ window.addEventListener('beforeinstallprompt', (e) => {
       });
   });
 });
+  </script>
+
+  <!-- Back-Button Android - https://stackoverflow.com/questions/43329654/android-back-button-on-a-progressive-web-application-closes-de-app -->
+  <script>
+window.addEventListener('load', function() {
+  window.history.pushState({ noBackExitsApp: true }, '')
+})
+
+window.addEventListener('popstate', function(event) {
+  if (event.state && event.state.noBackExitsApp) {
+    window.history.pushState({ noBackExitsApp: true }, '')
+  }
+})
   </script>
 
 
