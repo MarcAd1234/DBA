@@ -65,10 +65,13 @@ function darkthemeklick() {
 
 // Refresh Page
  function reloadButton() {
-  caches.keys().then(function(names) {
-    for (let name of names)
-        caches.delete(name);
-});
+  if ('serviceWorker' in navigator) {
+    caches.keys().then(function(cacheNames) {
+      cacheNames.forEach(function(cacheName) {
+        caches.delete(cacheName);
+      });
+    });
+  }
 };
 
 
@@ -83,25 +86,55 @@ function StartAlone(){
 
 function ClickButton0() {
       if (s == 1) {
-        s = s + 1;
-        return document.getElementById("s1").value = "0";
-        console.log(s);
+        check = document.getElementById("s1").value
+        if (check != "0" || "6" || "7" || "8" || "9" || "10") {
+          s = s + 1;
+          return document.getElementById("s1").value = "0";
+        }
+        else if (check = "0" || "6" || "7" || "8" || "9" || "10") {
+          s = s + 1;
+        }
       } else if (s == 2) {
-        s = s + 1;
-        return document.getElementById("s2").value = "0";
-        console.log(s);
+        check = document.getElementById("s2").value
+        if (check != "0" || "6" || "7" || "8" || "9" || "10") {
+          s = s + 1;
+          return document.getElementById("s2").value = "0";
+        }
+        else if (check = "0" || "6" || "7" || "8" || "9" || "10") {
+          s = s + 1;
+        }
       } else if (s == 3){
-        s = s + 1
-        document.getElementById("s3").value = "0"
+        if (document.getElementById("s3").value != "links Mitte") {
+          s = s + 1;
+        }
+        else {
+          document.getElementById("s3").value = "0";
+          s = s + 1;
+        }
       } else if (s == 4){
-        s = s + 1
-        document.getElementById("s4").value = "0"
+        if (document.getElementById("s4").value != "rechts Mitte") {
+          s = s + 1;
+        }
+        else {
+          document.getElementById("s4").value = "0";
+          s = s + 1;
+        }
       } else if (s == 5){
-        s = s + 1
-        document.getElementById("s5").value = "0"
+        if (document.getElementById("s5").value != "links unten") {
+          s = s + 1;
+        }
+        else {
+          document.getElementById("s5").value = "0";
+          s = s + 1;
+        }
       } else if (s == 6){
-        s = 0
-        document.getElementById("s6").value = "0"
+        if (document.getElementById("s6").value != "rechts unten") {
+          s = s + 1;
+        }
+        else {
+          document.getElementById("s6").value = "0";
+          s = s + 1;
+        }
       } 
     }
 
