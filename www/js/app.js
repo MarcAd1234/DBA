@@ -32,16 +32,16 @@ function darkthemeklick() {
 
 
 
-// Refresh Page
- function reloadButton() {
-  if ('serviceWorker' in navigator) {
-    caches.keys().then(function(cacheNames) {
-      cacheNames.forEach(function(cacheName) {
-        caches.delete(cacheName);
-      });
-    });
-  }
-};
+// // Updates Button - #erstmal verworfen
+//  function reloadButton() {
+//   if ('serviceWorker' in navigator) {
+//     caches.keys().then(function(cacheNames) {
+//       cacheNames.forEach(function(cacheName) {
+//         caches.delete(cacheName);
+//       });
+//     });
+//   }
+// };
 
 
 // Play alone
