@@ -1,7 +1,7 @@
 {
   "name": "DBA",
   "short_name": "DBA",
-  "description": "DBA",
+  "description": "DBA - Die Blasrohr App",
   "lang": "en-US",
   "start_url": "/",
   "display": "standalone",
