@@ -796,6 +796,7 @@ function ClickButton6() {
                 app.dialog.alert('Du hast in dieser Partie '+ ergGesamt + " Punkte erzielt");
                 Runde = -2
                 document.getElementById("AbgabeButtonAlone").innerHTML = ("...Zurück zum Hauptmenü")
+                document.getElementById("AbgabeButtonAlone").className = "mycol button button-fill color-red";
                 } 
               }
               else {
