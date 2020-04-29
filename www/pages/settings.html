@@ -14,18 +14,11 @@
   <div class="page-content">
 
 <div class="block-title">Darstellungsoptionen</div>
-    <div class="list simple-list">
-    <ul>
-      <li>
-        <span>Dark Mode</span>
-        <label class="toggle toggle-init color-blue">
-          <input type="checkbox" onclick="darkthemeklick()">
-          <span class="toggle-icon"></span>
-        </label>
-      </li>
-    </ul>
-  </div>
 
+  <div class="block">
+  <button class="col button button-fill color-dark" id="darkbutton" onclick="darkthemeklick()">dark</button>
+  <button class="col button button-fill color-dark" style="display: none" id="whitebutton" onclick="whitethemeklick()">white</button>
+  </div>
     <div class="block-title">Offline-Verfügbarkeit</div>
     <div class="list simple-list">
     <ul>

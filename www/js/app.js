@@ -27,7 +27,37 @@ var view = app.views.create('.view-main');
 
 // Enable Dark Theme
 function darkthemeklick() {
-  
+  if (Framework7.device.ios) {
+    document.getElementById("htmlpage").className = "theme-dark ios ios-translucent-bars ios-translucent-modals device-pixel-ratio-2 device-ios";
+  }
+  else{
+    document.getElementById("htmlpage").className = "theme-dark md device-pixel-ratio-3 device-android"
+  }
+  var x = document.getElementById("darkbutton");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  var y = document.getElementById("whitebutton");
+  y.style.display = "block"
+}
+
+function whitethemeklick() {
+  if (Framework7.device.ios) {
+    document.getElementById("htmlpage").className = "theme-white ios ios-translucent-bars ios-translucent-modals device-pixel-ratio-2 device-ios";
+  }
+  else{
+    document.getElementById("htmlpage").className = "theme-white md device-pixel-ratio-3 device-android"
+  }
+  var y = document.getElementById("whitebutton");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+  var x = document.getElementById("darkbutton");
+  x.style.display = "block"
 }
 
 
@@ -1079,7 +1109,7 @@ function ClickButton6() {
               }else {
                 CountTenB()
                 document.getElementById("tenB").innerHTML = zehnerB
-                
+
                 ergGesamtB = parseInt(document.getElementById("r1SB").innerHTML) + parseInt(document.getElementById("r2SB").innerHTML) + parseInt(document.getElementById("r3SB").innerHTML) + parseInt(document.getElementById("r4SB").innerHTML) + parseInt(document.getElementById("r5SB").innerHTML) + parseInt(document.getElementById("r6SB").innerHTML) + parseInt(document.getElementById("r7SB").innerHTML) + parseInt(document.getElementById("r8SB").innerHTML) + parseInt(document.getElementById("r9SB").innerHTML) + parseInt(document.getElementById("r10SB").innerHTML)
                 document.getElementById("ergGesamtB").innerHTML = ergGesamtB
 
