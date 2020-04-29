@@ -832,8 +832,8 @@ function ClickButton6() {
             if(document.getElementById('radio10').checked){
               konfig_value = document.getElementById('radio10').value;
             
-            }else if(document.getElementById('radio8').checked){
-              konfig_value = document.getElementById('radio8').value;
+            }else if(document.getElementById('radio7').checked){
+              konfig_value = document.getElementById('radio7').value;
             
             }else if(document.getElementById('radioFREE').checked){
               konfig_value = document.getElementById('radioFREE').value;
@@ -843,11 +843,66 @@ function ClickButton6() {
             s = 1;
             RundeA = 1;
             RundeB = 0.5;
+            zehnerA = 0;
+            zehnerB = 0;
             document.getElementById("playerATM").innerHTML = (Name1S + " ist gerade dran");
             document.getElementById("AbgabeButton").innerHTML = ("Runde für " + Name1S + " abgeben")
             };
 
 
+            function CountTenA() {
+              s1Count = parseInt(document.getElementById("s1").value)
+              if (s1Count === 10){
+                zehnerA = zehnerA + 1
+              }
+              s2Count = parseInt(document.getElementById("s2").value)
+              if (s2Count === 10){
+                zehnerA = zehnerA + 1
+              }
+              s3Count = parseInt(document.getElementById("s3").value)
+              if (s3Count === 10){
+                zehnerA = zehnerA + 1
+              }
+              s4Count = parseInt(document.getElementById("s4").value)
+              if (s4Count === 10){
+                zehnerA = zehnerA + 1
+              }
+              s5Count = parseInt(document.getElementById("s5").value)
+              if (s5Count === 10){
+                zehnerA = zehnerA + 1
+              }
+              s6Count = parseInt(document.getElementById("s6").value)
+              if (s6Count === 10){
+                zehnerA = zehnerA + 1
+              }
+            }
+
+            function CountTenB() {
+              s1Count = parseInt(document.getElementById("s1").value)
+              if (s1Count === 10){
+                zehnerB = zehnerB + 1
+              }
+              s2Count = parseInt(document.getElementById("s2").value)
+              if (s2Count === 10){
+                zehnerB = zehnerB + 1
+              }
+              s3Count = parseInt(document.getElementById("s3").value)
+              if (s3Count === 10){
+                zehnerB = zehnerB + 1
+              }
+              s4Count = parseInt(document.getElementById("s4").value)
+              if (s4Count === 10){
+                zehnerB = zehnerB + 1
+              }
+              s5Count = parseInt(document.getElementById("s5").value)
+              if (s5Count === 10){
+                zehnerB = zehnerB + 1
+              }
+              s6Count = parseInt(document.getElementById("s6").value)
+              if (s6Count === 10){
+                zehnerB = zehnerB + 1
+              }
+            }
 
             function CountRoundDuell() {
               x = parseInt(document.getElementById("s1").value) + parseInt(document.getElementById("s2").value) + parseInt(document.getElementById("s3").value) + parseInt(document.getElementById("s4").value) + parseInt(document.getElementById("s5").value) + parseInt(document.getElementById("s6").value);
@@ -981,10 +1036,14 @@ function ClickButton6() {
                       GetRidOffB()
                     }
                   }  
-            };
+              } else if (RundeA <= 0 || RundeB <= 0) {
+                view.router.navigate("/")
+              }
           }
 
             function GetRidOffA() {
+              CountTenA()
+              document.getElementById("tenA").innerHTML = zehnerA
               document.getElementById("s1").value = "links oben";
               document.getElementById("s2").value = "rechts oben";
               document.getElementById("s3").value = "links Mitte";
@@ -1001,30 +1060,54 @@ function ClickButton6() {
             }
 
             function GetRidOffB() {
-              document.getElementById("s1").value = "links oben";
-              document.getElementById("s2").value = "rechts oben";
-              document.getElementById("s3").value = "links Mitte";
-              document.getElementById("s4").value = "rechts Mitte";
-              document.getElementById("s5").value = "links unten";
-              document.getElementById("s6").value = "rechts unten";
-              ergGesamtB = parseInt(document.getElementById("r1SB").innerHTML) + parseInt(document.getElementById("r2SB").innerHTML) + parseInt(document.getElementById("r3SB").innerHTML) + parseInt(document.getElementById("r4SB").innerHTML) + parseInt(document.getElementById("r5SB").innerHTML) + parseInt(document.getElementById("r6SB").innerHTML) + parseInt(document.getElementById("r7SB").innerHTML) + parseInt(document.getElementById("r8SB").innerHTML) + parseInt(document.getElementById("r9SB").innerHTML) + parseInt(document.getElementById("r10SB").innerHTML)
-              document.getElementById("ergGesamtB").innerHTML = ergGesamtB
-              s = 1
-              RundeA = RundeA + 0.5
-              RundeB = RundeB + 0.5
-              document.getElementById("playerATM").innerHTML = (Name1S + " ist gerade dran");
-              document.getElementById("AbgabeButton").innerHTML = ("Runde für " + Name1S + " abgeben")
-              if (RundeB == 10.5){
+              if (RundeB < 10) {
+                CountTenB()
+                document.getElementById("tenB").innerHTML = zehnerB
+                document.getElementById("s1").value = "links oben";
+                document.getElementById("s2").value = "rechts oben";
+                document.getElementById("s3").value = "links Mitte";
+                document.getElementById("s4").value = "rechts Mitte";
+                document.getElementById("s5").value = "links unten";
+                document.getElementById("s6").value = "rechts unten";
+                ergGesamtB = parseInt(document.getElementById("r1SB").innerHTML) + parseInt(document.getElementById("r2SB").innerHTML) + parseInt(document.getElementById("r3SB").innerHTML) + parseInt(document.getElementById("r4SB").innerHTML) + parseInt(document.getElementById("r5SB").innerHTML) + parseInt(document.getElementById("r6SB").innerHTML) + parseInt(document.getElementById("r7SB").innerHTML) + parseInt(document.getElementById("r8SB").innerHTML) + parseInt(document.getElementById("r9SB").innerHTML) + parseInt(document.getElementById("r10SB").innerHTML)
+                document.getElementById("ergGesamtB").innerHTML = ergGesamtB
+                s = 1
+                RundeA = RundeA + 0.5
+                RundeB = RundeB + 0.5
+                document.getElementById("playerATM").innerHTML = (Name1S + " ist gerade dran");
+                document.getElementById("AbgabeButton").innerHTML = ("Runde für " + Name1S + " abgeben")
+              }else {
+                CountTenB()
+                document.getElementById("tenB").innerHTML = zehnerB
+                
+                ergGesamtB = parseInt(document.getElementById("r1SB").innerHTML) + parseInt(document.getElementById("r2SB").innerHTML) + parseInt(document.getElementById("r3SB").innerHTML) + parseInt(document.getElementById("r4SB").innerHTML) + parseInt(document.getElementById("r5SB").innerHTML) + parseInt(document.getElementById("r6SB").innerHTML) + parseInt(document.getElementById("r7SB").innerHTML) + parseInt(document.getElementById("r8SB").innerHTML) + parseInt(document.getElementById("r9SB").innerHTML) + parseInt(document.getElementById("r10SB").innerHTML)
+                document.getElementById("ergGesamtB").innerHTML = ergGesamtB
+
                 EndeA = document.getElementById("ergGesamtA").innerHTML
                 EndeB = document.getElementById("ergGesamtB").innerHTML
+                EndeTenA = document.getElementById("tenA").innerHTML
+                EndeTenB = document.getElementById("tenB").innerHTML
                 if (EndeA > EndeB) {
                   app.dialog.alert("Das Spiel ist beendet! " + Name1S + " hat gewonnen")
                   document.getElementById("playerATM").innerHTML = (Name1S + " hat bereits gewonnen")
-                } else {
+                } else if (EndeB > EndeA) {
                   app.dialog.alert("Das Spiel ist beendet! " + Name2S + " hat gewonnen")
                   document.getElementById("playerATM").innerHTML = (Name2S + " hat bereits gewonnen")
+                } else {
+                  if (EndeTenA > EndeTenB ){
+                    app.dialog.alert("Das Spiel ist beendet! " + Name1S + " hat gewonnen (mehr Zehner)")
+                    document.getElementById("playerATM").innerHTML = (Name1S + " hat bereits gewonnen")
+                  } else if (EndeTenB > EndeTenA ){
+                    app.dialog.alert("Das Spiel ist beendet! " + Name2S + " hat gewonnen (mehr Zehner)")
+                    document.getElementById("playerATM").innerHTML = (Name2S + " hat bereits gewonnen")
+                  } else {
+                    app.dialog.alert("Es gabe ein Unentschieden zwischen "+Name2S+" und "+Name1S+".")
+                    document.getElementById("playerATM").innerHTML = ("Es gabe ein Unentschieden")
+                  }
                 }
-                Runde = 0
-                document.getElementById("AbgabeButton").innerHTML = ("...");
+                RundeA = -2
+                RundeB = -2
+                document.getElementById("AbgabeButton").innerHTML = ("...Zurück zum Hauptmenü")
+                document.getElementById("AbgabeButton").className = "mycol button button-fill color-red"
               }; 
             }
