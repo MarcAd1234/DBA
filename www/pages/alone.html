@@ -47,10 +47,15 @@
   </div>
   
     <div class="block">
-      <div>Gesamt:</div>
-      <div id="ergGesamt">0</div>
+      <table>
+        <tr>
+          <td>Gesamt:</td>
+          <td id="ergGesamt">0</td>
+        <tr>
+          <td>Anzahl Zehner:</td>
+          <td id="ten">0</td>
+      </table>
     </div>
-
   
 
     <div class="block-title">Treffer eintragen</div>
@@ -194,7 +199,7 @@
         </ul>
       </div>
 
-    <button class="col button button-fill color-green" onclick="CountRound()">Runde abgeben</button>
+    <button class="col button button-fill color-green" onclick="CountRound()" id="AbgabeButtonAlone">Runde abgeben</button>
       
   </div>
 </div>
