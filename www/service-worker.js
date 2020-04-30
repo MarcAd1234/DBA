@@ -76,6 +76,34 @@ self.__WB_MANIFEST = [
     revision: '1',
     url: './together.html'
   },
+  {
+    revision: '1',
+    url: './together2.html'
+  },
+  {
+    revision: '1',
+    url: './erstelleTurnier.html'
+  },
+  {
+    revision: '1',
+    url: './ladeTurnier.html'
+  },
+  {
+    revision: '1',
+    url: './news.html'
+  },
+  {
+    revision: '1',
+    url: './regelwerk.html'
+  },
+  {
+    revision: '1',
+    url: './settings.html'
+  },
+  {
+    revision: '1',
+    url: './shop.html'
+  },
   // Icons
   {
     revision: '1',

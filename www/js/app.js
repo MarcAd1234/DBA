@@ -1,6 +1,6 @@
 var $$ = Dom7;
 
-// Theme
+// Theme aus Kitchen Sink F7 Doku
 var theme = 'auto';
 if (document.location.search.indexOf('theme=') >= 0) {
   theme = document.location.search.split('theme=')[1].split('&')[0];
@@ -60,19 +60,6 @@ function whitethemeklick() {
   var x = document.getElementById("darkbutton");
   x.style.display = "block"
 }
-
-
-
-// // Updates Button - #erstmal verworfen
-//  function reloadButton() {
-//   if ('serviceWorker' in navigator) {
-//     caches.keys().then(function(cacheNames) {
-//       cacheNames.forEach(function(cacheName) {
-//         caches.delete(cacheName);
-//       });
-//     });
-//   }
-// };
 
 
 // Play alone
