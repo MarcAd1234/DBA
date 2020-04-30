@@ -70,7 +70,6 @@
 
 
 table {
-    border-collapse: collapse;
     text-align: center;
     width: 100%;
 
@@ -78,10 +77,16 @@ table {
   
   table, th, td {
     border: 1px solid black;
+    border-style: outset;
+  }
+
+  td {
+    background-color: #bbbdf7;
+    color: black;
   }
 
   th {
-    background-color: rgb(74, 77, 74);
+    background-color: #444794;
     color: white;
   }
 

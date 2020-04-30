@@ -25,6 +25,7 @@ var app = new Framework7({
 var view = app.views.create('.view-main');
  
 
+
 // Enable Dark Theme
 function darkthemeklick() {
   if (Framework7.device.ios) {
