@@ -3,7 +3,7 @@
   "short_name": "DBA",
   "description": "DBA - Die Blasrohr App",
   "lang": "en-US",
-  "start_url": "/",
+  "start_url": "/www/DBA/index.html",
   "display": "standalone",
   "background_color": "#EE350F",
   "theme_color": "#EE350F",
